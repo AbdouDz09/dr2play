@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "1";
+const prefix = "2";
 /////////////////////////
 ////////////////////////
 
@@ -313,31 +313,31 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '1help') {
+    if (message.content === '2help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription
-        .addField('1play', 'لتشغيل اغنية')
-        .addField('1join', 'دخول رومك الصوتي')
-        .addField('1disconnect', 'الخروج من رومك الصوتي')
-        .addField('1skip', 'تخطي الأغنية')
-        .addField('1pause', 'ايقاف الاغنية مؤقتا')
-        .addField('1resume', 'تكملة الاغنية')
-        .addField('1queue', 'اظهار قائمة التشغيل')
-        .addField('1np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .addField('2play', 'لتشغيل اغنية')
+        .addField('2join', 'دخول رومك الصوتي')
+        .addField('2disconnect', 'الخروج من رومك الصوتي')
+        .addField('2skip', 'تخطي الأغنية')
+        .addField('2pause', 'ايقاف الاغنية مؤقتا')
+        .addField('2resume', 'تكملة الاغنية')
+        .addField('2queue', 'اظهار قائمة التشغيل')
+        .addField('2np', 'اظهار الاغنية اللي انت مشغلها حاليا')
 	.setFooter('============================================')
-        .addField('1ghelp', 'اظهاراوامر العامة')
+        .addField('2ghelp', 'اظهاراوامر العامة')
         .setFooter('♡♡♡♡■《《♧♧》》■♡♡♡♡')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === '1ghelp') {
+    if (message.content === '2ghelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
-        .addField('1avatar', "افاتار الشخص المطلوب")
-        .addField('1ping', 'معرفة ping البوت')
+        .addField('2avatar', "افاتار الشخص المطلوب")
+        .addField('2ping', 'معرفة ping البوت')
       message.channel.send(helpEmbed);
     }
 });
@@ -354,7 +354,7 @@ client.on('ready', () => {
 
 
 
-var adminprefix = "1";
+var adminprefix = "2";
 const devs = ['461468630773661699'];
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Code
